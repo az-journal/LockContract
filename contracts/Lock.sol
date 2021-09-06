@@ -13,8 +13,8 @@ contract ERC20Lock {
     event TokenReceived(address indexed token, address indexed from, uint amount);// Log the event about a deposit being made by an address and its amount
     event TokenSent(address indexed token, address indexed to, uint amount); // Log the even about withdrawal being made
     
-    constructor () { 
-        owner = msg.sender;
+    constructor (address owner_) { 
+        owner = owner_;
     }
 
     function deposit(address token, uint amount) external {
